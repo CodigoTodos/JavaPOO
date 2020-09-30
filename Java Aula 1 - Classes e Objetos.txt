@@ -1,0 +1,92 @@
+// Classe 
+class Carro {
+  // Atributos
+  private String marca;
+  private String modelo;
+  private String matricula;
+  private int preco;
+    // Metodos
+
+   //Construtores 
+  public Carro(String marca, String modelo, String matricula, int preco) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.matricula = matricula;
+    this.preco = preco;
+  }
+
+  public Carro() {
+    marca = "Desconhecida";
+    modelo = "Desconhecido";
+    matricula = "Desconhecida";
+    preco = 0;
+  }
+
+  public Carro(String marca, String modelo) {
+    this.marca = marca;
+    this.modelo = modelo ;
+    matricula = "Desconhecida";
+    preco = 0;
+  }
+  //Getter 
+  public String getMarca() {
+    return marca;
+  }
+
+  public String getModelo() {
+    return modelo;
+  }
+  
+  public String getMatricula() {
+    return modelo;
+  }
+
+   public int getPreco() {
+    return preco;
+  }
+  //Setter
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
+
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
+
+  public void setMatricula(String matricula) {
+    this.matricula = matricula ;
+  }
+
+  public void setPreco(int preco) {
+    this.preco = preco;
+  }
+
+  //Outros Metodos
+  public void mostrar() {
+    System.out.println("Dados do Carro");
+    System.out.println("Marca: " + marca);
+    System.out.println("Modelo: " + modelo);
+    System.out.println("Matricula: " + matricula);
+    System.out.println("Preço: " + preco+"\n");
+   
+
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Carro c1 = new Carro("Fiat","Punto","15-15-ZV",9900);
+    Carro c2 = new Carro();
+    Carro c3 = new Carro("Opel","Astra");
+    c1.mostrar();
+    c2.mostrar();
+    c3.mostrar();
+    c3.setMatricula("36-45-XC");
+    c3.setPreco(7500);
+    c3.mostrar();
+
+    System.out.println(c1.getPreco());
+
+  }
+}

@@ -1,0 +1,33 @@
+//Metodos e ATributos das Classes
+class Aluno {
+ 
+  private String nome;
+  private int numero;
+  private static int totalAlunos=0;
+
+  public Aluno(String nome, int numero) {
+    this.nome = nome;
+    this.numero = numero;
+    totalAlunos+=1;
+  }
+
+  public void mostrar() {
+    System.out.println("Dados do Aluno");
+    System.out.println("Nome:" + nome);
+    System.out.println("Numero: " + numero);
+  }
+
+   public static int getTotalAlunos() {
+    return totalAlunos;
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println(Aluno.getTotalAlunos());
+    
+    Aluno a = new Aluno("Rui",2589);
+    a.mostrar(); 
+    System.out.println(Aluno.getTotalAlunos());
+  }
+}

@@ -1,0 +1,135 @@
+// Classe 
+class Veiculo {
+  // Atributos
+  private String marca;
+  private String modelo;
+  private String matricula;
+  private int preco;
+    // Metodos
+
+   //Construtores 
+  public Veiculo(String marca, String modelo, String matricula, int preco) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.matricula = matricula;
+    this.preco = preco;
+  }
+
+  public Veiculo() {
+    marca = "Desconhecida";
+    modelo = "Desconhecido";
+    matricula = "Desconhecida";
+    preco = 0;
+  }
+
+  public Veiculo(String marca, String modelo) {
+    this.marca = marca;
+    this.modelo = modelo ;
+    matricula = "Desconhecida";
+    preco = 0;
+  }
+  //Getter 
+  public String getMarca() {
+    return marca;
+  }
+
+  public String getModelo() {
+    return modelo;
+  }
+  
+  public String getMatricula() {
+    return modelo;
+  }
+
+   public int getPreco() {
+    return preco;
+  }
+  //Setter
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
+
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
+
+  public void setMatricula(String matricula) {
+    this.matricula = matricula ;
+  }
+
+  public void setPreco(int preco) {
+    this.preco = preco;
+  }
+
+  //Outros Metodos
+  public void mostrar() {
+   
+    System.out.println("Marca: " + marca);
+    System.out.println("Modelo: " + modelo);
+    System.out.println("Matricula: " + matricula);
+    System.out.println("Preço: " + preco);
+  
+  }
+}
+
+class Carro extends Veiculo 
+{
+  private int nlugares;
+  public Carro (String marca, String modelo, String matricula, int preco, int nlugares) {
+    super(marca, modelo, matricula,preco);
+    this.nlugares= nlugares;
+  }
+
+  public void mostrar() {
+     System.out.println("Dados do Carro");
+     super.mostrar();
+     System.out.println("Numero Lugares: " + nlugares+"\n");
+  
+  }
+}
+
+class Mota extends Veiculo 
+{
+  private int cilindrada;
+  public Mota (String marca, String modelo, String matricula, int preco, int cilindrada) {
+    super(marca, modelo, matricula,preco);
+    this.cilindrada= cilindrada;
+  }
+
+   public void mostrar() {
+     System.out.println("Dados da Mota ");
+     super.mostrar();
+     System.out.println("Cilindrada: " + cilindrada+"\n");
+  
+  }
+}
+
+class Camiao extends Veiculo 
+{
+  private int peso;
+  public Camiao (String marca, String modelo, String matricula, int preco, int peso) {
+    super(marca, modelo, matricula,preco);
+    this.peso = peso;
+  }
+  public void mostrar() {
+     System.out.println("Dados do Camião ");
+     super.mostrar();
+     System.out.println("Peso: " + peso+"\n");
+  
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Carro c = new Carro("Fiat","Punto","15-15-ZV",9900,5);
+    c.mostrar();
+
+    Mota m = new Mota("Kawasaki","ZX 6R","23-15-AB",10500,636);
+    m.mostrar();
+
+    Camiao cam = new Camiao("Scania","G320","28-42-AB",49900,26100);
+    cam.mostrar();
+   
+  }
+}

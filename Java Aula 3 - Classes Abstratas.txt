@@ -1,0 +1,64 @@
+ class Veiculo {
+
+  private String marca;
+  private String modelo;
+  private String matricula;
+  private int preco;
+  
+  public Veiculo(String marca, String modelo, String matricula, int preco) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.matricula = matricula;
+    this.preco = preco;
+  }
+}
+
+class Carro extends Veiculo 
+{
+  private int nlugares;
+
+  public Carro (String marca, String modelo, String matricula, int preco, int nlugares) {
+    super(marca, modelo, matricula,preco);
+    this.nlugares= nlugares;
+  }
+
+}
+
+class Mota extends Veiculo 
+{
+  private int cilindrada;
+
+  public Mota (String marca, String modelo, String matricula, int preco, int cilindrada) {
+    super(marca, modelo, matricula,preco);
+    this.cilindrada= cilindrada;
+  }
+
+   
+}
+
+class Camiao extends Veiculo 
+{
+  private int peso;
+
+  public Camiao (String marca, String modelo, String matricula, int preco, int peso) {
+    super(marca, modelo, matricula,preco);
+    this.peso = peso;
+  }
+ 
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Veiculo v = new Veiculo("Desconhecida","Desconhecido","Desconhecida",0);
+    Carro c = new Carro("Fiat","Punto","15-15-ZV",9900,5);
+    
+
+    Mota m = new Mota("Kawasaki","ZX 6R","23-15-AB",10500,636);
+   
+
+    Camiao cam = new Camiao("Scania","G320","28-42-AB",49900,26100);
+    
+   
+  }
+}

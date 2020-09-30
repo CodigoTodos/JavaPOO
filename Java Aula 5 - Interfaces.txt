@@ -1,0 +1,58 @@
+// Interfaces
+interface Poligno {
+  public void perimetro(); 
+  public void area();
+}
+
+class Quadrado implements Poligno {
+
+   private int lado;
+
+   public Quadrado(int lado) {
+    this.lado = lado;
+  }
+
+   public void perimetro()
+   {
+     
+     System.out.println("Perimetro Quadrado: " + (lado+lado+lado+lado));
+   } 
+
+   public void area()
+   {
+     System.out.println("Area Quadrado: " + lado*lado);
+   } 
+}
+
+class Rectangulo implements Poligno {
+
+   private int comprimento;
+   private int largura;
+
+   public Rectangulo(int comprimento, int largura) {
+    this.comprimento = comprimento;
+    this.largura = largura;
+  }
+
+   public void perimetro()
+   {
+     System.out.println("Perimetro Rectangulo: " + (comprimento+comprimento+largura+largura));
+   } 
+
+   public void area()
+   {
+     System.out.println("Area Rectangulo: " + comprimento*largura);
+   } 
+}
+
+class Main {
+ public static void main(String[] args) {
+
+    Quadrado q = new Quadrado(5);
+    Rectangulo r = new Rectangulo(5,4);
+    q.perimetro();
+    q.area();
+    r.perimetro();
+    r.area();
+  }
+}
